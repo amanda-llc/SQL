@@ -1,3 +1,5 @@
+-- This analysis utilized the following Fortune 500 dataset:
+
 CREATE TABLE fortune_companies (
     company_id INTEGER PRIMARY KEY,
     company_name TEXT,
@@ -56,6 +58,7 @@ VALUES
     ('Company JJ', 'Manufacturing', 370.0, 3100, 1, 20, 12, 7.6),
     ('Company KK', 'Healthcare', 150.2, 3400, 0, 16, 8, 5.3);
 
+-- Analysis
 
 -- View all the data in the table
 SELECT *
@@ -74,7 +77,7 @@ WHERE healthcare_benefits=1
 ORDER BY maternity_leave_weeks;
 
 
--- Reurn the names of all companies that offer healthcare benefits, at least 20 paid days off, and at least 12 weeks of maternity leave. Also show the number of paid days off and weeks of maternity leave.
+-- Reurn the names of all companies that offer healthcare benefits, at least 20 paid days off, and at least 12 weeks of maternity leave. Show the number of paid days off and weeks of maternity leave.
 SELECT company_name, paid_time_off_days, maternity_leave_weeks
 FROM fortune_companies
 WHERE healthcare_benefits=1
